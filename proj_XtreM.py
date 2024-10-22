@@ -1,3 +1,6 @@
+#O projeto é pensado para a escalabilidade, e não abrange muitas funcionalidades 
+#mas o que for necessário consegue-se fazer na parte de atalhos. leia 253.
+
 import pyodbc
 import tkinter as tk
 from tkinter import ttk
@@ -14,7 +17,7 @@ def registrar_log(mensagem):
     logging.info(mensagem)  # Registra uma mensagem de informação
 
 # Uso do logger
-registrar_log("Este é um log de exemplo.")
+registrar_log("Aqui ficam os logs")
 
 # Função para conectar ao banco de dados
 def conectar_banco(database=None):
@@ -245,6 +248,9 @@ def abrir_janela_consulta_detalhada():
 
     btn_executar_consulta_detalhada = tk.Button(consulta_detalhada_window, text="Executar Consulta Detalhada", command=executar_consulta_detalhada)
     btn_executar_consulta_detalhada.pack(pady=10)
+
+
+### Para o funcionamento desta parte, necessario criar a tabela dbo.atalhos com as colunas nome_cod, cods.###
 
 # Função para abrir a nova janela de atalhos
 def abrir_janela_atalhos():
